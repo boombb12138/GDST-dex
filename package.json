@@ -138,5 +138,9 @@
     "apps/*",
     "packages/*",
     "config/*"
-  ]
+  ],
+  "devDependencies": {
+    "@swc/cli": "0.5.1",
+    "@swc/core": "1.9.3"
+  }
 }
