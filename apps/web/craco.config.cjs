@@ -192,6 +192,24 @@ module.exports = {
         return rule
       })
 
+      webpackConfig.devServer = {
+        ...webpackConfig.devServer,
+        headers: {
+          'Access-Control-Allow-Origin': '*', // 允许所有来源
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // 允许的请求方法
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization', // 允许的请求头
+        },
+        // 代理配置（如果有需要的话）
+        proxy: {
+          '/api': {
+            target: 'https://your-api-server.com', // 你的API服务器地址
+            changeOrigin: true,
+            secure: false, // 对非 HTTPS 环境可以关闭 SSL 验证
+          },
+        },
+      };
+      
+
       // since wallet package uses react-native-dotenv and that needs a babel plugin
       // adding this before the swc loader
       webpackConfig.module.rules[1].oneOf.unshift({
