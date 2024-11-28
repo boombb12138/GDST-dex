@@ -1,17 +1,17 @@
 // Ordering is intentional and must be preserved: styling, polyfilling, tracing, and then functionality.
 // prettier-ignore
-import '@reach/dialog/styles.css'
+import '@reach/dialog/styles.css';
 // prettier-ignore
-import 'inter-ui'
+import 'inter-ui';
 // prettier-ignore
-import 'polyfills'
+import 'polyfills';
 // prettier-ignore
-import 'tracing'
+import 'tracing';
 // ensure translations load before things
 // prettier-ignore
-import 'i18n'
+import 'i18n';
 // prettier-ignore
-import 'setupRive'
+import 'setupRive';
 
 import { getDeviceId } from '@amplitude/analytics-browser'
 import { ApolloProvider } from '@apollo/client'
