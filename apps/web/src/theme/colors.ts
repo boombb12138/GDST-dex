@@ -84,7 +84,8 @@ export const colors = {
   blueVibrant: '#587BFF',
   // TODO: add magenta 50-900
   magenta300: '#FD82FF',
-  magentaVibrant: '#FC72FF',
+  // magentaVibrant: '#FC72FF',
+  magentaVibrant: '#FCD241',//这个改成了主题色
   purple300: '#8440F2',
   purple900: '#1C0337',
   purpleVibrant: '#6100FF',
@@ -125,7 +126,7 @@ export const colors = {
   surface3_hovered_light: 'rgba(34, 34, 34, 0.12))',
   surface4_light: '#FFFFFF64',
   surface5_light: '#00000004',
-  accent1_light: '#FC72FF',
+  accent1_light: '#FCD241',
   accent2_light: '#FFEFFF',
   accent3_light: '#4C82FB',
   success: '#40B66B',
@@ -169,39 +170,39 @@ const commonTheme = {
   promotionalGradient: colors.accent1_light,
 }
 
-export const darkTheme = {
-  ...commonTheme,
+// export const darkTheme = {
+//   ...commonTheme,
 
-  background: colors.black,
+//   background: colors.black,
 
-  neutral1: colors.neutral1_dark,
-  neutral2: colors.neutral2_dark,
-  neutral3: colors.neutral3_dark,
-  neutralContrast: colors.white,
+//   neutral1: colors.neutral1_dark,
+//   neutral2: colors.neutral2_dark,
+//   neutral3: colors.neutral3_dark,
+//   neutralContrast: colors.white,
 
-  surface1: colors.surface1_dark,
-  surface1Hovered: colors.surface1_hovered_dark,
-  surface2: colors.surface2_dark,
-  surface2Hovered: colors.surface2_hovered_dark,
-  surface3: colors.surface3_dark,
-  surface3Hovered: colors.surface3_hovered_dark,
-  surface4: colors.surface4_dark,
-  surface5: colors.surface5_dark,
+//   surface1: colors.surface1_dark,
+//   surface1Hovered: colors.surface1_hovered_dark,
+//   surface2: colors.surface2_dark,
+//   surface2Hovered: colors.surface2_hovered_dark,
+//   surface3: colors.surface3_dark,
+//   surface3Hovered: colors.surface3_hovered_dark,
+//   surface4: colors.surface4_dark,
+//   surface5: colors.surface5_dark,
 
-  accent1: colors.accent1_dark,
-  accent2: colors.accent2_dark,
-  accent3: colors.accent3_dark,
+//   accent1: colors.accent1_dark,
+//   accent2: colors.accent2_dark,
+//   accent3: colors.accent3_dark,
 
-  token0: colors.accent1_dark,
-  token1: colors.accent3_dark,
+//   token0: colors.accent1_dark,
+//   token1: colors.accent3_dark,
 
-  success: colors.success,
-  critical: colors.critical,
-  critical2: colors.critical2_dark,
-  scrim: colors.scrim,
+//   success: colors.success,
+//   critical: colors.critical,
+//   critical2: colors.critical2_dark,
+//   scrim: colors.scrim,
 
-  warning2: colors.gold200,
-}
+//   warning2: colors.gold200,
+// }
 
 export const lightTheme: ThemeColors = {
   ...commonTheme,
@@ -222,7 +223,7 @@ export const lightTheme: ThemeColors = {
   surface4: colors.surface4_light,
   surface5: colors.surface5_light,
 
-  accent1: colors.accent1_light,
+  accent1: colors.accent1_light, 
   accent2: colors.accent2_light,
   accent3: colors.accent3_light,
 
@@ -232,6 +233,39 @@ export const lightTheme: ThemeColors = {
   success: colors.success,
   critical: colors.critical,
   critical2: colors.critical2_light,
+  scrim: colors.scrim,
+
+  warning2: colors.gold200,
+}
+
+export const darkTheme = {
+  ...commonTheme,
+
+  background: '#0A0807',  
+  
+  neutral1: '#F9F8F7',  
+  neutral2: '#A3A09C', 
+  neutral3: '#A3A09C',  
+  neutralContrast: colors.white,
+
+  surface1: '#0A0807',  
+  surface1Hovered: '#272524',  
+  surface2: '#0A0807',  
+  surface2Hovered: '#272524', 
+  surface3: '#272524', 
+  surface3Hovered: '#2F2C2B', 
+  surface4: '#272524',  
+  surface5: '#272524',  
+
+  accent1: '#FCD241',  
+  accent2: '#272524',  
+  accent3: '#F9F8F7',  
+  token0: '#2B6EFD',  
+  token1: '#19B275', 
+
+  success: colors.success,
+  critical: '#7E1D1D',  
+  critical2: '#F9F8F7',  
   scrim: colors.scrim,
 
   warning2: colors.gold200,

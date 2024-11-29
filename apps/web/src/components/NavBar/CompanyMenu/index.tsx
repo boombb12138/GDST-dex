@@ -9,7 +9,6 @@ import styled from 'lib/styled-components'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Popover, Text } from 'ui/src'
-import { Hamburger } from 'ui/src/components/icons'
 
 const ArrowDown = styled(ArrowChangeDown)<{ $isActive: boolean }>`
   height: 100%;
@@ -58,20 +57,20 @@ export function CompanyMenu() {
 
   return (
     <Popover ref={popoverRef} placement="bottom" hoverable stayInFrame allowFlip onOpenChange={setIsOpen}>
-      <Popover.Trigger>
-        <Trigger>
-          <UniIcon onClick={handleLogoClick}>
-            <NavIcon width="48" height="48" data-testid="uniswap-logo" />
-            {isLargeScreen && (
-              <Text variant="subheading1" color="$accent1" userSelect="none">
-                Uniswap
-              </Text>
-            )}
-          </UniIcon>
-          {(isSmallScreen || isTouchDevice) && <Hamburger size={22} color="$neutral2" cursor="pointer" ml="16px" />}
-          <ArrowDown $isActive={isOpen} width="12px" height="12px" />
-        </Trigger>
-      </Popover.Trigger>
+      {/* <Popover.Trigger>
+        <Trigger> */}
+      <UniIcon onClick={handleLogoClick}>
+        <NavIcon width="48" height="48" data-testid="dgs-logo" />
+        {isLargeScreen && (
+          <Text variant="subheading1" color="#FCD241" userSelect="none">
+            DGS
+          </Text>
+        )}
+      </UniIcon>
+      {/* {(isSmallScreen || isTouchDevice) && <Hamburger size={22} color="$neutral2" cursor="pointer" ml="16px" />} */}
+      {/* <ArrowDown $isActive={isOpen} width="12px" height="12px" /> */}
+      {/* </Trigger>
+      </Popover.Trigger> */}
       {isMobileDrawer ? <MobileMenuDrawer isOpen={isOpen} closeMenu={closeMenu} /> : <MenuDropdown close={closeMenu} />}
     </Popover>
   )
